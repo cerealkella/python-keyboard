@@ -1,5 +1,5 @@
 
-from keyboard import *
+from PYKB import *
 
 
 keyboard = Keyboard()
@@ -7,7 +7,7 @@ keyboard = Keyboard()
 ___ = TRANSPARENT
 BOOT = BOOTLOADER
 L1 = LAYER_TAP(1)
-L2D = LAYER_TAP(2, D)
+L2F = LAYER_TAP(2, F)
 L3B = LAYER_TAP(3, B)
 LSFT4 = LAYER_MODS(4, MODS(LSHIFT))
 RSFT4 = LAYER_MODS(4, MODS(RSHIFT))
@@ -22,7 +22,7 @@ keyboard.keymap = (
     (
         ESC,   1,   2,   3,   4,   5,   6,   7,   8,   9,   0, '-', '=', BACKSPACE,
         TAB,   Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P, '[', ']', '|',
-        CAPS,  A,   S, L2D,   F,   G,   H,   J,   K,   L, SCC, '"',    ENTER,
+        CAPS,  A,   S,   D, L2F,   G,   H,   J,   K,   L, SCC, '"',    ENTER,
         LSFT4, Z,   X,   C,   V, L3B,   N,   M, ',', '.', '/',         RSFT4,
         LCTRL, LGUI, LALT,          SPACE,            RALT, MENU,  L1, RCTRL
     ),
@@ -41,8 +41,8 @@ keyboard.keymap = (
         '`',  F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9, F10, F11, F12, DEL,
         ___, ___, ___, ___, ___, ___,HOME,PGUP, ___, ___,SINS,AUDIO_VOL_DOWN,AUDIO_VOL_UP,AUDIO_MUTE,
         ___, ___, ___, ___, ___, ___,LEFT,DOWN, UP,RIGHT, ___, ___,      ___,
-        ___, ___, ___, ___, ___, ___,PGDN,END, ___, ___, ___,           ___,
-        ___, ___, ___,                ___,               ___, ___, ___,  ___
+        ___, ___, ___, ___, ___, ___,PGDN,END, ___, ___, UP,           ___,
+        ___, ___, ___,                ___,               LEFT, DOWN,  RIGHT, ___
     ),
 
     # layer 3
